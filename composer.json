@@ -24,6 +24,6 @@
         "psr-0": {
             "PhantomInstaller\\": "src/"
         },
-        "classmap": ["src/PhantomInstaller\\Installer.php"]
+        "classmap": ["src/PhantomInstaller/Installer.php"]
     }
 }
