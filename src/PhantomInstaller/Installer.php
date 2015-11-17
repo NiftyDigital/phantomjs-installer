@@ -161,7 +161,10 @@ class Installer
 
         if ($os !== 'unknown') {
             copy($targetDir . $sourceName, $targetName);
-            chmod($targetName, self::PHANTOMJS_MODE);
+
+            if ($os != 'windows' && fileowner($targetName) == posix_getuid()) {
+                @chmod($targetName, self::PHANTOMJS_MODE);
+            }
         }
     }
 
