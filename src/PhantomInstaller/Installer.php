@@ -24,6 +24,8 @@ class Installer
 
     const PHANTOMJS_TARGETDIR = '/NiftyDigital/phantomjs';
 
+    const PHANTOMJS_MODE = 0770;
+
     /**
      * Operating system dependend installation of PhantomJS
      */
@@ -159,7 +161,7 @@ class Installer
 
         if ($os !== 'unknown') {
             copy($targetDir . $sourceName, $targetName);
-            chmod($targetName, 0755);
+            chmod($targetName, self::PHANTOMJS_MODE);
         }
     }
 
