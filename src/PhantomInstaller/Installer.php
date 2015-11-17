@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the "jakoch/phantomjs-installer" package.
+ * This file is part of the "NiftyDigital/phantomjs-installer" package.
  *
  * Copyright (c) 2013-2015 Jens-André Koch <jakoch@web.de>
  *
@@ -22,7 +22,7 @@ class Installer
 {
     const PHANTOMJS_NAME = 'PhantomJS';
 
-    const PHANTOMJS_TARGETDIR = '/jakoch/phantomjs';
+    const PHANTOMJS_TARGETDIR = '/NiftyDigital/phantomjs';
 
     /**
      * Operating system dependend installation of PhantomJS
@@ -83,7 +83,7 @@ class Installer
 
         // version was not found in the local repository, let's take a look at the root package
         if($version == null) {
-            $version = self::getRequiredVersion($composer->getPackage(), 'jakoch/phantomjs-installer');
+            $version = self::getRequiredVersion($composer->getPackage(), 'NiftyDigital/phantomjs-installer');
         }
 
         // fallback to a hardcoded version number, if "dev-master" was set
@@ -117,7 +117,7 @@ class Installer
      * @throws \RuntimeException
      * @return mixed
      */
-    public static function getRequiredVersion(RootPackageInterface $package, $packageName = 'jakoch/phantomjs-installer')
+    public static function getRequiredVersion(RootPackageInterface $package, $packageName = 'NiftyDigital/phantomjs-installer')
     {
         foreach (array($package->getRequires(), $package->getDevRequires()) as $requiredPackages) {
             if (isset($requiredPackages[$packageName])) {

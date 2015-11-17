@@ -25,13 +25,6 @@ script:
   - ls -ashF bin
   - bin/phantomjs -v
 
-notifications:
-  email: false
-  irc:
-    channels:
-      - "irc.freenode.org#koch"
-    use_notice: true
-
 # reduce commit history of git checkout
 git:
   depth: 5

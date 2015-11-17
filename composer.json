@@ -1,5 +1,5 @@
 {
-    "name": "jakoch/phantomjs-installer",
+    "name": "NiftyDigital/phantomjs-installer",
     "description": "A Composer package which installs the PhantomJS binary (Linux, Windows, Mac) into `/bin` of your project.",
     "type": "custom-installer",
     "keywords": ["phantomjs", "headless", "binaries"],
@@ -8,10 +8,17 @@
         {
             "name": "Jens-André Koch",
             "email": "jakoch@web.de"
+        },
+        {
+            "name": "Jack Price",
+            "email": "jack@wearenifty.co.uk"
         }
     ],
     "require": {
         "ext-openssl": "*"
+    },
+    "replace": {
+        "jakoch/phantomjs-isntaller": "*"
     },
     "autoload": {
         "psr-0": {
