@@ -18,7 +18,7 @@
         "ext-openssl": "*"
     },
     "replace": {
-        "jakoch/phantomjs-isntaller": "*"
+        "jakoch/phantomjs-installer": "*"
     },
     "autoload": {
         "psr-0": {
